@@ -2,7 +2,6 @@ package org.parchmentmc.feather.metadata;
 
 import com.google.common.collect.Sets;
 import org.checkerframework.checker.nullness.qual.NonNull;
-import org.checkerframework.checker.nullness.qual.Nullable;
 import org.parchmentmc.feather.named.Named;
 import org.parchmentmc.feather.named.NamedBuilder;
 import org.parchmentmc.feather.util.AccessFlag;

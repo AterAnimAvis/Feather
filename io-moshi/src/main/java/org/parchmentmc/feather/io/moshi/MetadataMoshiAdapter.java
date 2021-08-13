@@ -9,7 +9,6 @@ import org.parchmentmc.feather.util.SimpleVersion;
 import java.io.IOException;
 import java.util.LinkedHashSet;
 import java.util.Map;
-import java.util.Optional;
 
 @SuppressWarnings("unused")
 public class MetadataMoshiAdapter {

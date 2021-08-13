@@ -1,10 +1,6 @@
 package org.parchmentmc.feather.io.tests;
 
 import org.junit.jupiter.api.Test;
-import org.parchmentmc.feather.io.moshi.LinkedHashSetMoshiAdapter;
-import org.parchmentmc.feather.io.moshi.MetadataMoshiAdapter;
-import org.parchmentmc.feather.io.moshi.MoshiTest;
-import org.parchmentmc.feather.io.moshi.SimpleVersionAdapter;
 import org.parchmentmc.feather.metadata.ClassMetadata;
 import org.parchmentmc.feather.metadata.FieldMetadata;
 import org.parchmentmc.feather.metadata.MetadataTestConstants;
