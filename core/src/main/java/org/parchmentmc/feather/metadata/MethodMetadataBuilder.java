@@ -151,7 +151,7 @@ public final class MethodMetadataBuilder implements MethodMetadata
             (t, i) -> t
           ));
 
-        final Map<MethodReference, MethodReference> schemadSoureOverrides =
+        final Map<MethodReference, MethodReference> schemadSourceOverrides =
           source.getOverrides().stream().collect(
             Collectors.toMap(
               mr -> MethodReferenceBuilder.create()
@@ -175,7 +175,7 @@ public final class MethodMetadataBuilder implements MethodMetadata
         this.overrides = new LinkedHashSet<>();
         for (final MethodReference keyReference : schemadLocalOverrides.keySet())
         {
-            if (!schemadSoureOverrides.containsKey(keyReference))
+            if (!schemadSourceOverrides.containsKey(keyReference))
             {
                 this.overrides.add(schemadLocalOverrides.get(keyReference));
             }
@@ -183,14 +183,14 @@ public final class MethodMetadataBuilder implements MethodMetadata
             {
                 this.overrides.add(
                   MethodReferenceBuilder.create(schemadLocalOverrides.get(keyReference))
-                    .merge(schemadSoureOverrides.get(keyReference))
+                    .merge(schemadSourceOverrides.get(keyReference))
                     .build()
                 );
             }
         }
-        schemadSoureOverrides.keySet().stream()
+        schemadSourceOverrides.keySet().stream()
           .filter(mr -> !schemadLocalOverrides.containsKey(mr))
-          .forEach(mr -> this.overrides.add(schemadSoureOverrides.get(mr)));
+          .forEach(mr -> this.overrides.add(schemadSourceOverrides.get(mr)));
 
         this.name = NamedBuilder.create(this.name)
                       .merge(source.getName())

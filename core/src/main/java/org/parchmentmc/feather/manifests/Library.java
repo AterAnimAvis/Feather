@@ -61,7 +61,7 @@ public class Library implements Serializable {
     }
 
     /**
-     * Returns the nformation for the natives contained in this library, or {@code null} if no natives are contained.
+     * Returns the information for the natives contained in this library, or {@code null} if no natives are contained.
      *
      * @return the natives information, or {@code null} if there are no natives
      */

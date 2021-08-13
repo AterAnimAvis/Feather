@@ -243,7 +243,7 @@ public interface MappingDataContainer {
          * <p>The two special methods have special restrictions on their descriptors, as defined in &sect;2.9 <em>"Special
          * Methods"</em> of the JVMS 8.</p>
          *
-         * <p>For the <em>class/interface initializatiom method</em> ({@code init}): it will always have no
+         * <p>For the <em>class/interface initialization method</em> ({@code init}): it will always have no
          * parameters and a void return descriptor, for a method descriptor of {@code ()V}. For the <em>instance
          * initialization method</em> ({@code <init>}), also known as a <em>constructor</em> in the Java programming
          * language: by definition (&sect;8.8 <em>"Constructor Declarations"</em> of the JLS 8) it must not return a value,

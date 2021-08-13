@@ -12,7 +12,7 @@ public interface HasImmutable<I extends HasImmutable<I>> {
     /**
      * Creates an immutable version of this object.
      *
-     * @return The immutbale version of this object.
+     * @return The immutable version of this object.
      */
     @NonNull
     I toImmutable();
