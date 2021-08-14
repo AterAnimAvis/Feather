@@ -1,0 +1,24 @@
+group = 'org.parchmentmc.feather'
+archivesBaseName = 'io-storage'
+
+dependencies {
+    api project(':feather')
+    api 'com.google.guava:guava:30.1.1-jre'
+
+    testImplementation project(':feather').sourceSets.test.output
+    testImplementation project(':io-gson')
+    testImplementation project(':io-gson').sourceSets.test.output
+    testImplementation project(':io-moshi')
+    testImplementation project(':io-moshi').sourceSets.test.output
+    testImplementation 'com.google.jimfs:jimfs:1.2'
+}
+
+publishing {
+    publications.create("moshiIO", MavenPublication) {
+        from components.java
+        pom {
+            name = "Feather IO - Storage"
+            description = "Additional IO library for serializing MappingDataContainers."
+        }
+    }
+}
