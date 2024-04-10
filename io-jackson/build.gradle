@@ -1,0 +1,19 @@
+group = 'org.parchmentmc.feather'
+archivesBaseName = 'io-jackson'
+
+dependencies {
+    api project(':feather')
+    api libs.jackson
+
+    testFixturesApi testFixtures(project(':feather'))
+}
+
+publishing {
+    publications.create("jacksonIO", MavenPublication) {
+        from components.java
+        pom {
+            name = "Feather IO - Jackson"
+            description = "Additional IO library for serializing JSON data objects using Jackson."
+        }
+    }
+}

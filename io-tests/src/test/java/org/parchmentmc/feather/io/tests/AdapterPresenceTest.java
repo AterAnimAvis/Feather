@@ -11,7 +11,7 @@ import java.util.stream.StreamSupport;
 public class AdapterPresenceTest {
     
     private static final ServiceLoader<IOAdapterFactory> CONVERTERS = ServiceLoader.load(IOAdapterFactory.class);
-    private static final String[] EXPECTED_ADAPTERS = new String[] { "gson", "moshi" };
+    private static final String[] EXPECTED_ADAPTERS = new String[] { "gson", "moshi", "jackson" };
     
     @Test
     public void insureExpectedAdaptersAreActuallyPresent() {

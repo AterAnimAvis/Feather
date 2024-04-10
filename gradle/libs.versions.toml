@@ -5,6 +5,7 @@ guava = '32.0.1-jre'
 
 # IO subproject dependencies
 gson = '2.10.1'
+jackson = '2.16.0'
 moshi = '1.12.0' # Fixed to 1.12.0 because that's the last version written in Java
 
 # Test engine
@@ -15,6 +16,7 @@ checker-qual = { module = 'org.checkerframework:checker-qual', version.ref = 'ch
 guava = { module = 'com.google.guava:guava', version.ref = 'guava' }
 
 gson = { module = 'com.google.code.gson:gson', version.ref = 'gson' }
+jackson = { module = 'com.fasterxml.jackson.core:jackson-databind', version.ref = 'jackson' }
 moshi = { module = 'com.squareup.moshi:moshi', version.ref = 'moshi' }
 
 junit-api = { module = 'org.junit.jupiter:junit-jupiter-api', version.ref = 'junit' }
