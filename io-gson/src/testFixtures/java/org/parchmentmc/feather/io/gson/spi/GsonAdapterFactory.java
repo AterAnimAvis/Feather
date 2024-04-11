@@ -14,6 +14,8 @@ import java.time.OffsetDateTime;
 
 public class GsonAdapterFactory implements IOAdapterFactory {
 
+    private static final String NAME = "gson";
+    
     private static final Gson gson = new GsonBuilder()
             .registerTypeAdapterFactory(new MDCGsonAdapterFactory())
             .registerTypeAdapterFactory(new MetadataAdapterFactory())
@@ -21,6 +23,11 @@ public class GsonAdapterFactory implements IOAdapterFactory {
             .registerTypeAdapter(SimpleVersion.class, new SimpleVersionAdapter())
             .disableHtmlEscaping()
             .create();
+
+    @Override
+    public String name() {
+        return NAME;
+    }
 
     @Override
     public <T> IOAdapter<T> create(Class<T> clazz) {
@@ -37,7 +44,7 @@ public class GsonAdapterFactory implements IOAdapterFactory {
 
         @Override
         public String name() {
-            return "gson";
+            return NAME;
         }
 
         @Override

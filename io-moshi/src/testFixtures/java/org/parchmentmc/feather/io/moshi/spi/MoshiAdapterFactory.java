@@ -10,6 +10,8 @@ import java.io.IOException;
 
 public class MoshiAdapterFactory implements IOAdapterFactory {
 
+    private static final String NAME = "moshi";
+    
     private static final Moshi moshi = new Moshi.Builder()
             .add(LinkedHashSetMoshiAdapter.FACTORY)
             .add(new MDCMoshiAdapter())
@@ -17,6 +19,11 @@ public class MoshiAdapterFactory implements IOAdapterFactory {
             .add(new OffsetDateTimeAdapter())
             .add(new SimpleVersionAdapter())
             .build();
+
+    @Override
+    public String name() {
+        return NAME;
+    }
 
     @Override
     public <T> IOAdapter<T> create(Class<T> clazz) {
@@ -33,7 +40,7 @@ public class MoshiAdapterFactory implements IOAdapterFactory {
 
         @Override
         public String name() {
-            return "moshi";
+            return NAME;
         }
 
         @Override

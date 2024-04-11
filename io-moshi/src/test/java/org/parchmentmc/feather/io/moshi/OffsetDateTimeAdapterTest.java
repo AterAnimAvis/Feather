@@ -12,7 +12,7 @@ public class OffsetDateTimeAdapterTest extends MoshiTest {
     }
 
     @Test
-    public void testGson() {
+    public void testMoshi() {
         test(OffsetDateTime.class, OffsetDateTime.MIN);
         test(OffsetDateTime.class, OffsetDateTime.MAX);
         test(OffsetDateTime.class, OffsetDateTime.ofInstant(Instant.EPOCH, ZoneOffset.UTC));

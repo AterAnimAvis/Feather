@@ -3,6 +3,11 @@ package org.parchmentmc.feather.spi;
 public interface IOAdapterFactory {
 
     /**
+     * @return Simple descriptive name of the underlying implementation
+     */
+    String name();
+
+    /**
      * Creates a {@link IOAdapter <T>} for the passed in Class
      *
      * @param clazz The class of the object to convert
